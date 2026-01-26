@@ -119,11 +119,13 @@ This collection of Claude Skills provides comprehensive templates and best pract
 
 ## Usage
 
-To use a skill, read the SKILL.md file and follow the templates:
+To use a skill with Claude Code you have some options
 
-```
-view /home/claude/skills/{skill-name}/SKILL.md
-```
+- For personal skills available across all projects, you can place them in `~/.claude/skills/`
+- Or just in `./skills/` in your project
+- Personally I like to place them inside the project's git repo, inside a `CLAUDE` directory and mention their location in the main `CLAUDE.md` file in the root of the repo.
+
+Then ask Claude to apply the patterns to your specific use case.
 
 Each skill contains:
 - Overview and purpose
@@ -134,3 +136,6 @@ Each skill contains:
 - Anti-patterns to avoid
 - Related skills
 
+---
+
+_Have suggestions or want to contribute? Open an issue or PR on GitHub. Let's make .NET Clean Architecture accessible to everyone._
