@@ -37,12 +37,13 @@ This collection of Claude Skills provides comprehensive templates and best pract
 ### Infrastructure Skills
 
 | # | Skill | Description | Key Templates |
-|---|-------|-------------|---------------|
-| 14 | **outbox-pattern** | Reliable messaging | OutboxMessage, Processor job, Idempotency |
-| 15 | **quartz-background-jobs** | Scheduled jobs | IJob, Cron scheduling, Job configuration |
-| 16 | **email-service** | Email integration | IEmailService, SendGrid, Templates |
-| 17 | **health-checks** | Dependency monitoring | PostgreSQL, HTTP, Custom checks |
-| 18 | **audit-trail** | Change tracking | IAuditable, EF interceptor, Soft delete |
+|------|-------|-------------|---------------|
+| 14   | **outbox-pattern** | Reliable messaging | OutboxMessage, Processor job, Idempotency |
+| 15   | **quartz-background-jobs** | Scheduled jobs | IJob, Cron scheduling, Job configuration |
+| 16.1 | **email-service-sendgrid** | Email integration | IEmailService, SendGrid, Templates |
+| 16.2 | **email-service-aws-ses** | Email integration | IEmailService, AWS SES, Local Templates |
+| 17   | **health-checks** | Dependency monitoring | PostgreSQL, HTTP, Custom checks |
+| 18   | **audit-trail** | Change tracking | IAuditable, EF interceptor, Soft delete |
 
 ### Data Access Skills
 
