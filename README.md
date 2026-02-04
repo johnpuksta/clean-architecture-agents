@@ -18,23 +18,6 @@ A coordinated multi-agent system for **any .NET development task**. The **Orches
 
 The orchestrator skill runs in your main Claude Code window, analyzes your request, and coordinates the appropriate subagents automatically. You don't need to know which agents to call - just describe what you need.
 
-### Architecture
-
-```
-┌─────────────────────────────────┐
-│   Orchestrator (Skill)          │  ← Call this via /orchestrator
-│   Runs in main conversation     │
-└────────────┬────────────────────┘
-             │ coordinates
-    ┌────────┴────────┬────────┬────────┬────────┐
-    ▼                 ▼        ▼        ▼        ▼
-domain-agent   application-  infra-   api-   web-agent
-(Subagent)      agent        agent   agent   (Subagent)
-               (Subagent)  (Subagent)(Subagent)
-```
-
-**Key Difference**: The orchestrator is a **skill** (runs in main context, can invoke subagents), while the layer agents are **subagents** (run in isolated contexts).
-
 ### Single Agent vs Orchestrated Workflow
 
 ```mermaid
@@ -259,7 +242,7 @@ Use the api-agent to create Orders endpoints with custom search
 
 ### Reference Material
 - [`SKILLS-MAPPING.md`](./SKILLS-MAPPING.md) - Complete mapping of which skills each subagent has access to
-- `skills/00-orchestrator/` - Orchestrator skill documentation
+- `skills/orchestrate-ca-agents/` - Orchestrator skill documentation
 - `skills/` - Individual skill documentation with detailed patterns (27 specialized skills)
 - `agents/` - Subagent configuration files
 
@@ -267,7 +250,7 @@ Use the api-agent to create Orders endpoints with custom search
 
 ### How It Works
 
-1. **Orchestrator Skill** (`skills/00-orchestrator/`)
+1. **Orchestrator Skill** (`skills/orchestrate-ca-agents/`)
    - Runs in main conversation context (your CLI window in Claude Code)
    - Analyzes requests and creates execution plans
    - Coordinates subagent invocation sequentially
